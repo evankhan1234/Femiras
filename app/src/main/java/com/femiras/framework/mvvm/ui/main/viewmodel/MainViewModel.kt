@@ -1,11 +1,11 @@
-package com.mindorks.framework.mvvm.ui.main.viewmodel
+package com.femiras.framework.mvvm.ui.main.viewmodel
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
-import com.mindorks.framework.mvvm.data.model.User
-import com.mindorks.framework.mvvm.data.repository.MainRepository
-import com.mindorks.framework.mvvm.utils.NetworkHelper
-import com.mindorks.framework.mvvm.utils.Resource
+import com.femiras.framework.mvvm.data.model.User
+import com.femiras.framework.mvvm.data.repository.MainRepository
+import com.femiras.framework.mvvm.utils.NetworkHelper
+import com.femiras.framework.mvvm.utils.Resource
 import kotlinx.coroutines.launch
 
 class MainViewModel @ViewModelInject constructor(

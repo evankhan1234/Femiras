@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm
+package com.femiras.framework.mvvm
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

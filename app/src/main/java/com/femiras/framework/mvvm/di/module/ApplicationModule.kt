@@ -1,9 +1,9 @@
-package com.mindorks.framework.mvvm.di.module
+package com.femiras.framework.mvvm.di.module
 
-import com.mindorks.framework.mvvm.BuildConfig
-import com.mindorks.framework.mvvm.data.api.ApiHelper
-import com.mindorks.framework.mvvm.data.api.ApiHelperImpl
-import com.mindorks.framework.mvvm.data.api.ApiService
+import com.femiras.framework.mvvm.BuildConfig
+import com.femiras.framework.mvvm.data.api.ApiHelper
+import com.femiras.framework.mvvm.data.api.ApiHelperImpl
+import com.femiras.framework.mvvm.data.api.ApiService
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

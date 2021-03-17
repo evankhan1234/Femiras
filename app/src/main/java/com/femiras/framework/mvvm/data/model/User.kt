@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm.data.model
+package com.femiras.framework.mvvm.data.model
 
 import com.squareup.moshi.Json
 

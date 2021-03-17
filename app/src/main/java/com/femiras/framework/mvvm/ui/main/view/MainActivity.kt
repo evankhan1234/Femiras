@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm.ui.main.view
+package com.femiras.framework.mvvm.ui.main.view
 
 import android.os.Bundle
 import android.view.View
@@ -9,10 +9,10 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mindorks.framework.mvvm.R
-import com.mindorks.framework.mvvm.data.model.User
-import com.mindorks.framework.mvvm.ui.main.adapter.MainAdapter
-import com.mindorks.framework.mvvm.ui.main.viewmodel.MainViewModel
-import com.mindorks.framework.mvvm.utils.Status
+import com.femiras.framework.mvvm.data.model.User
+import com.femiras.framework.mvvm.ui.main.adapter.MainAdapter
+import com.femiras.framework.mvvm.ui.main.viewmodel.MainViewModel
+import com.femiras.framework.mvvm.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
