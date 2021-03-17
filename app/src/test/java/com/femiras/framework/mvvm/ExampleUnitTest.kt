@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm
+package com.femiras.framework.mvvm
 
 import org.junit.Test
 
