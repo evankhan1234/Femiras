@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/signin_navigation.xml"
+    app:startDestination="@id/signInContentFragment">
+    <fragment
+        android:id="@+id/signInContentFragment"
+        android:name="com.femiras.framework.mvvm.ui.spalash.SignInContentFragment"
+        android:label="SigninByPhoneBodyFragment" >
+
+        <action
+            android:id="@+id/action_signInContentFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popEnterAnim="@anim/slide_left_to_center" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.femiras.framework.mvvm.ui.spalash.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_otpFragment"
+            app:destination="@id/otpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.femiras.framework.mvvm.ui.spalash.OTPFragment"
+        android:label="OTPFragment" >
+
+    </fragment>
+</navigation>

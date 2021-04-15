@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mindorks.framework.mvvm.R
+import com.femiras.framework.mvvm.R
 import com.femiras.framework.mvvm.data.model.User
 import com.femiras.framework.mvvm.ui.main.adapter.MainAdapter
 import com.femiras.framework.mvvm.ui.main.viewmodel.MainViewModel

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    android:id="@+id/signInContentMotionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layoutDescription="@xml/otp_motion_scene">
+
+
+    <TextView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="17sp"
+        android:textColor="@color/secondaryTextColor"
+        android:text="@string/enter_the_code_that_was_sent_to"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"  />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:textColor="@color/primaryTextColor"
+        android:text="+88 01754619679"
+        app:layout_constraintStart_toStartOf="@id/imageView13"
+        app:layout_constraintEnd_toEndOf="@id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+    <com.chaos.view.PinView
+        android:id="@+id/textView436"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/PinWidget.PinView"
+        android:textSize="18sp"
+        app:itemCount="4"
+        app:itemSpacing="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        app:itemRadius="4dp"
+        android:inputType="number"
+        android:cursorVisible="true"
+        app:itemHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView43"
+        app:layout_constraintStart_toStartOf="@+id/textView43"
+        app:layout_constraintTop_toBottomOf="@+id/textView43"
+        app:lineColor="#f56258"/>
+
+    <TextView
+        android:id="@+id/textView437"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="19sp"
+        android:textColor="@color/primaryTextColor"
+        android:text="@string/i_didn_t_get_a_code"
+        app:layout_constraintStart_toStartOf="@id/textView436"
+        app:layout_constraintEnd_toEndOf="@id/textView436"
+        app:layout_constraintTop_toBottomOf="@+id/textView436" />
+    <Button
+        android:id="@+id/backToTransactionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/capsule_button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:text="@string/next"
+        app:layout_constraintEnd_toEndOf="@+id/textView437"
+        app:layout_constraintStart_toStartOf="@+id/textView437"
+        app:layout_constraintTop_toBottomOf="@+id/textView437" />
+    <TextView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/back"
+        android:textAllCaps="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:drawableStartCompat="@drawable/ic_left_arrow"
+        app:layout_constraintTop_toBottomOf="@id/backToTransactionButton"
+        app:layout_constraintStart_toStartOf="@id/backToTransactionButton"
+        app:layout_constraintEnd_toEndOf="@id/backToTransactionButton" />
+</androidx.constraintlayout.motion.widget.MotionLayout>

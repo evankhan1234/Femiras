@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.started.view.StartedActivity">
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="207dp"
+        android:scaleType="centerCrop"
+
+        android:contentDescription="txt_msg_success"
+        android:src="@drawable/questions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryTextColor"
+            android:text="Enter your first day of last period."
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+    <CalendarView
+        android:layout_marginTop="10dp"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dateTextAppearance="@style/CalenderViewDateCustomText"
+        android:theme="@style/CalenderViewCustom"
+        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+        app:layout_constraintEnd_toEndOf="@+id/textView43"
+        app:layout_constraintStart_toStartOf="@+id/textView43"
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+        <Button
+            android:id="@+id/backToTransactionButton"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/capsule_button"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="@string/next"
+            app:layout_constraintEnd_toEndOf="@+id/calendarView"
+            app:layout_constraintStart_toStartOf="@+id/calendarView"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

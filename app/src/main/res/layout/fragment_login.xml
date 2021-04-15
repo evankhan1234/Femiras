@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    android:id="@+id/signInContentMotionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layoutDescription="@xml/verify_signin_motion_scene">
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="66dp"
+        android:contentDescription="txt_msg_success"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:textSize="17sp"
+        android:textColor="@color/primaryTextColor"
+        android:text="@string/enter_your_mobile_number"
+        app:layout_constraintStart_toStartOf="@id/imageView13"
+        app:layout_constraintEnd_toEndOf="@id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+    <LinearLayout
+        android:layout_marginTop="34dp"
+        android:id="@+id/textView436"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/capsul_border"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textView43"
+        app:layout_constraintStart_toStartOf="@+id/textView43"
+        app:layout_constraintTop_toBottomOf="@+id/textView43"
+        >
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:text="+88"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:layout_marginLeft="10dp" />
+
+        <ImageView
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="5dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_down_arrow"
+            android:layout_marginLeft="5dp" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/mobile_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@null"
+            android:hint="@string/enter_number"
+            android:inputType="number"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:layout_marginLeft="8dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backToTransactionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/capsule_button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:text="@string/next"
+        app:layout_constraintEnd_toEndOf="@+id/textView436"
+        app:layout_constraintStart_toStartOf="@+id/textView436"
+        app:layout_constraintTop_toBottomOf="@+id/textView436" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
