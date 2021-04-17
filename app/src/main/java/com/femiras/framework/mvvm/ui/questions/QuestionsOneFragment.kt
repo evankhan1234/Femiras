@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.femiras.framework.mvvm.R
 import com.femiras.framework.mvvm.extension.launchActivity
+import com.femiras.framework.mvvm.ui.spalash.SignInContentFragmentDirections
 import kotlinx.android.synthetic.main.fragment_o_t_p.*
 
 
@@ -24,10 +26,13 @@ class QuestionsOneFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         backToTransactionButton.setOnClickListener{
-            requireActivity().launchActivity<QuestionsActivity>()
-            requireActivity().finish()
+            if (findNavController().currentDestination?.id != R.id.questionsTwoFragment && findNavController().currentDestination?.id == R.id.questionsOneFragment) {
+                findNavController().navigate(
+                        QuestionsOneFragmentDirections.actionQuestionsOneFragmentToSquestionsTwoFragment(
 
-
+                        )
+                )
+            }
         }
     }
 }

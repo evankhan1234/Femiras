@@ -1,14 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.questions.QuestionsTwoFragment">
+    android:padding="10dp"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.started.view.StartedActivity">
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/imageView13"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-</FrameLayout>
+
+
+
+
+        <LinearLayout
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13"
+            android:id="@+id/textView43"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:background="@drawable/ic_rectangle_44"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                android:textColor="@color/colorPrimary"
+                android:drawablePadding="3dp"
+                android:textAlignment="center"
+
+                android:text="Length of last period."
+
+                android:textSize="19sp"
+                android:textStyle="normal" />
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:orientation="horizontal"
+                tools:ignore="ExtraText">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:contentDescription="txt_phone_number"
+                    android:src="@drawable/ic_polygon_7" />
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+
+                    android:textColor="@color/colorPrimary"
+                    android:drawablePadding="3dp"
+
+
+                    android:text="5 Days"
+
+                    android:textSize="17sp"
+                    android:textStyle="normal" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:contentDescription="txt_down_arrow_flag"
+                    android:src="@drawable/ic_polygon_6" />
+                />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintEnd_toEndOf="@+id/textView43"
+        app:layout_constraintStart_toStartOf="@+id/textView43"
+        app:layout_constraintTop_toBottomOf="@+id/textView43"
+        android:id="@+id/calendarView"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:background="@drawable/ic_rectangle_44"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:textColor="@color/colorPrimary"
+            android:drawablePadding="3dp"
+            android:textAlignment="center"
+
+            android:text="Average length of cycles"
+
+            android:textSize="19sp"
+            android:textStyle="normal" />
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:orientation="horizontal"
+            tools:ignore="ExtraText">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:contentDescription="txt_phone_number"
+                android:src="@drawable/ic_polygon_7" />
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+
+                android:textColor="@color/colorPrimary"
+                android:drawablePadding="3dp"
+
+
+                android:text="28 Days"
+
+                android:textSize="17sp"
+                android:textStyle="normal" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:contentDescription="txt_down_arrow_flag"
+                android:src="@drawable/ic_polygon_6" />
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/backToTransactionButton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/capsule_button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:text="@string/next"
+        app:layout_constraintEnd_toEndOf="@+id/calendarView"
+        app:layout_constraintStart_toStartOf="@+id/calendarView"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
