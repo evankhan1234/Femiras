@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_screen_navigation"
+    app:startDestination="@id/menu_feed">
+
+    <fragment
+        android:id="@+id/menu_feed"
+        android:name="com.femiras.framework.mvvm.ui.home.HomeFragment"
+        android:label="Home" >
+    </fragment>
+    <fragment
+        android:id="@+id/menu_tv"
+        android:name="com.femiras.framework.mvvm.ui.account.AccountFragment"
+        android:label="AnalysisFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/menu_chat"
+        android:name="com.femiras.framework.mvvm.ui.chat.ChatFragment"
+        android:label="AnalysisFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/menu_shop"
+        android:name="com.femiras.framework.mvvm.ui.shop.ShopFragment"
+        android:label="AnalysisFragment">
+    </fragment>
+</navigation>

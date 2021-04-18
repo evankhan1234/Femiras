@@ -10,4 +10,6 @@
     <string name="enter_the_code_that_was_sent_to">Enter the code that was sent to</string>
     <string name="i_didn_t_get_a_code">I didn\'t get a code</string>
     <string name="back">Back</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.femiras.framework.mvvm.R
+import com.femiras.framework.mvvm.extension.launchActivity
+import com.femiras.framework.mvvm.ui.HomeActivity
 import com.femiras.framework.mvvm.utils.EventDecorator
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView
+import kotlinx.android.synthetic.main.fragment_questions_two.*
 
-import kotlinx.android.synthetic.main.fragment_questions_two.imageView13
 import org.threeten.bp.LocalDate
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -53,6 +55,13 @@ class QuestionsTwoFragment : Fragment() {
         setEvent(grayDateList, gray)
 
         imageView13!!.invalidateDecorators()
+
+        backToTransactionButton.setOnClickListener{
+            requireActivity().launchActivity<HomeActivity>()
+            requireActivity().finish()
+
+
+        }
     }
     fun setEvent(dateList: List<String?>, color: Int) {
         val localDateList: MutableList<LocalDate> = ArrayList()

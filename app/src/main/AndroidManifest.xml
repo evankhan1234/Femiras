@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".ui.questions.QuestionsActivity"></activity>
+        <activity android:name=".ui.HomeActivity"></activity>
+        <activity android:name=".ui.questions.QuestionsActivity" />
         <activity android:name=".ui.started.view.StartedActivity" />
         <activity android:name=".ui.main.view.MainActivity" />
         <activity android:name=".ui.spalash.SpalashActivity">
