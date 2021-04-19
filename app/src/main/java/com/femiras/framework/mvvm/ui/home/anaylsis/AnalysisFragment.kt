@@ -1,4 +1,4 @@
-package com.femiras.framework.mvvm.ui.anaylsis
+package com.femiras.framework.mvvm.ui.home.anaylsis
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.femiras.framework.mvvm.R
+import com.femiras.framework.mvvm.ui.spalash.SplashScreenFragment
 
 
 class AnalysisFragment : Fragment() {
@@ -19,5 +20,8 @@ class AnalysisFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_analysis, container, false)
     }
 
-
+    companion object {
+        @JvmStatic
+        fun newInstance() = AnalysisFragment()
+    }
 }

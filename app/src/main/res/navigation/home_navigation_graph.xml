@@ -25,5 +25,19 @@
         android:id="@+id/menu_shop"
         android:name="com.femiras.framework.mvvm.ui.shop.ShopFragment"
         android:label="AnalysisFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/home_analysis"
+        android:name="com.femiras.framework.mvvm.ui.home.anaylsis.AnalysisFragment"
+        android:label="AnalysisFragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/home_today"
+        android:name="com.femiras.framework.mvvm.ui.home.today.TodayFragment"
+        android:label="AnalysisFragment">
+
     </fragment>
 </navigation>
