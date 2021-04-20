@@ -1,64 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    android:background="#FFFFFF"
-    >
-    <LinearLayout
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/landing_coordinator"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <androidx.recyclerview.widget.RecyclerView
-            android:nestedScrollingEnabled="false"
+        android:layout_height="match_parent">
 
-            android:id="@+id/listview"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/landing_appbar"
+            android:background="@color/white"
+            app:layout_behavior="com.femiras.framework.mvvm.utils.AppBarLayoutBehavior"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/featuredFragment"
+                    android:name="com.femiras.framework.mvvm.ui.home.today.FirstFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/popularTvChannelsFragment"
+                    android:name="com.femiras.framework.mvvm.ui.home.today.SecondFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
 
-        <TextView
-            android:layout_marginLeft="13dp"
-            android:id="@+id/textView43"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:drawablePadding="3dp"
-            android:text="My Daily Insights"
-            android:textColor="#594D92"
-            android:textSize="19sp"
-            android:textStyle="normal"
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
-             />
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="10dp"
-            android:visibility="visible"
-            android:nestedScrollingEnabled="false"
-
-            android:id="@+id/listview1"
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/latestVideoScroller"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           />
+            android:layout_height="match_parent">
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/latestVideosFragment"
+                android:name="com.femiras.framework.mvvm.ui.home.today.ThirdFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
 
-
-        <Button
-            android:layout_marginTop="120dp"
-            android:id="@+id/backToTransactionButton"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/capsule_button"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:text="@string/next"
-             />
-
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

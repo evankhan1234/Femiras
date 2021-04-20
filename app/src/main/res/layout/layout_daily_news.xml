@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_corner"
+        android:padding="5dp"
+        android:layout_marginTop="12dp">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/poster"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="W,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.847"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.227"
+            app:riv_border_color="#FF529B"
+            app:riv_corner_radius="10dp"
+            app:riv_mutate_background="true" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+
+            android:text="Birth control pills"
+            android:textColor="#594D92"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/poster"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <ProgressBar
+
+            android:visibility="gone"
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:max="1000"
+            android:progressBackgroundTint="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/poster"
+
+            app:layout_constraintStart_toStartOf="@+id/poster" />
+
+        <TextView
+            android:id="@+id/owner"
+            android:layout_width="0dp"
+            android:minLines="2"
+            android:maxLines="2"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="13sp"
+
+            android:text="BC NDP pledge free prescription contraception,Liberals would scrap seniors’ driver exam fee"
+            android:textColor="#292929"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintEnd_toEndOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            />
+
+        <TextView
+            android:textSize="11sp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/owners"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="The party said the program to provide . . ."
+            android:textColor="#292929"
+            app:layout_constraintStart_toStartOf="@id/owner"
+            app:layout_constraintEnd_toEndOf="@id/owner"
+            app:layout_constraintTop_toBottomOf="@+id/owner"
+            />
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/viewCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_heart"
+            app:layout_constraintEnd_toStartOf="@+id/uploadTime"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/owners"
+            app:layout_constraintTop_toBottomOf="@id/owners"
+           />
+
+        <TextView
+           android:layout_marginStart="6dp"
+            android:id="@+id/uploadTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="8dp"
+
+            android:text="4.4 k"
+            android:textSize="11sp"
+            android:textColor="#FF509A"
+            app:layout_constraintStart_toEndOf="@id/viewCount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewCount"
+            app:layout_constraintBottom_toBottomOf="@id/viewCount"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

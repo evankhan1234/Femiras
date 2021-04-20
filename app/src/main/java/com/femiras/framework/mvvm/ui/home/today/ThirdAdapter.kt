@@ -7,26 +7,27 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.femiras.framework.mvvm.R
 import kotlinx.android.synthetic.main.layout_daily_news.view.*
-import kotlinx.android.synthetic.main.layout_second.*
-import kotlinx.android.synthetic.main.layout_second.view.*
 
-class SecondAdapter (val context: Context) : RecyclerView.Adapter<SecondAdapter.CustomViewHolder>() {
+class ThirdAdapter  (val context: Context) : RecyclerView.Adapter<ThirdAdapter.CustomViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val inflater = LayoutInflater.from(parent?.context)
-        val cellForRow = inflater.inflate(R.layout.layout_second, parent, false)
+        val cellForRow = inflater.inflate(R.layout.layout_daily_news, parent, false)
         return CustomViewHolder(cellForRow)
     }
 
     override fun getItemCount(): Int {
 
 
-        return 5
+        return 105
     }
 
     override fun onBindViewHolder(holder:CustomViewHolder, position: Int) {
-
+         if(position % 2  == 0)
+            holder.itemView.poster.setImageResource(R.drawable.test)
+        else
+            holder.itemView.poster.setImageResource(R.drawable.pregnancy)
 //       when (position) {
 //            1 ->
 //                holder.itemView.icon.setImageResource(R.drawable.seconds)
