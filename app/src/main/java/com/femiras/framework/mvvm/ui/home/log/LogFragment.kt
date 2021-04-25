@@ -13,6 +13,8 @@ import com.prolificinteractive.materialcalendarview.CalendarDay
 import com.prolificinteractive.materialcalendarview.CalendarMode
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView
 import kotlinx.android.synthetic.main.fragment_log.*
+import kotlinx.android.synthetic.main.fragment_log.imageView13
+import kotlinx.android.synthetic.main.fragment_questions_two.*
 import org.threeten.bp.LocalDate
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -45,7 +47,10 @@ class LogFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        imageView1!!.showOtherDates = MaterialCalendarView.SHOW_ALL
+        val min: LocalDate = getLocalDate("2021-04-01")!!
+        val max: LocalDate = getLocalDate("2021-04-30")!!
+
+        imageView13!!.state().edit().setMinimumDate(min).setMaximumDate(max).commit()
 
         imageView1.state().edit()
             .setMaximumDate(CalendarDay.from(2021, 3, 1))
