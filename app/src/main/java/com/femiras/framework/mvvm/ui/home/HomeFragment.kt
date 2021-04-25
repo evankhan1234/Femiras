@@ -22,8 +22,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val adapter = HomePagerAdapter(childFragmentManager)
+        pager.offscreenPageLimit = 1
         pager.adapter = adapter
         tabLayout.setupWithViewPager(pager)
+
 
     }
 

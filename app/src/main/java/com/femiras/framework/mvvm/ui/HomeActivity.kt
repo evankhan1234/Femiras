@@ -36,10 +36,15 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(binding.tbar.toolbar)
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
+        initDrawer()
         setupNavController()
-        binding?.fab?.setOnClickListener {
-            Toast.makeText(this, "ggg", LENGTH_SHORT).show()
+        binding.fab.setOnClickListener {
+            navController.navigate(R.id.logFragment)
         }
+    }
+    private fun initDrawer(){
+        drawerHelper = DrawerHelper(this, binding)
+        drawerHelper.initDrawer()
     }
     fun getNavController() = navController
 

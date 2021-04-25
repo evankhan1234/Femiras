@@ -1,12 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@id/menu_feed"
-        android:title="Home"
-        android:icon="@drawable/ic_icons_home" />
-    <item
-        android:id="@id/menu_tv"
-        android:title="tab_tv_label"
-        android:icon="@drawable/ic_icons_home" />
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@id/menu_feed"
+            android:title="Add My Partner"
+            android:icon="@drawable/ic_add_user" />
+        <item
 
+            android:id="@id/menu_tv"
+            android:title="My Health Profile"
+            android:icon="@drawable/ic_heart" />
+        <item
+            android:id="@id/menu_chat"
+            android:title="Export PDF Data Report"
+            android:icon="@drawable/ic_path_1350" />
+        <item
+            android:id="@id/menu_chat"
+            android:title="Reminders"
+            android:icon="@drawable/ic_bell" />
+    </group>
+
+            <group
+                android:id="@+id/menu_bottom"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@id/menu_chat"
+                    android:title="Community Profile"
+                    android:icon="@drawable/ic_google_hangouts" />
+                <item
+                    android:id="@id/menu_chat"
+                    android:title="Community Bookmarks"
+                    android:icon="@drawable/ic_bookmark" />
+            </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@id/menu_feed"
+            android:title="Settings"
+            android:icon="@drawable/ic_cog2" />
+        <item
+
+            android:id="@id/menu_chat"
+            android:title="Help and Support"
+            android:icon="@drawable/ic_info2" />
+        <item
+            android:id="@id/menu_chat"
+            android:title="Your Cart"
+            android:icon="@drawable/ic_shopping_cart_24px" />
+        <item
+            android:id="@id/menu_chat"
+            android:title="Favourites"
+            android:icon="@drawable/ic_star_outlined" />
+        <item
+            android:id="@id/menu_chat"
+            android:title="Your Order"
+            android:icon="@drawable/ic_content_paste_24px" />
+        <item
+            android:id="@id/menu_feed"
+            android:title="Log Out"
+            android:icon="@drawable/ic_log_out" />
+    </group>
 </menu>

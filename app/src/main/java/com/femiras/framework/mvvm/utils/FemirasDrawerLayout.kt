@@ -10,10 +10,10 @@ class FemirasDrawerLayout  @JvmOverloads constructor(context: Context,
                                                      defStyleAttr: Int = 0
 ): DrawerLayout(context, attrs, defStyleAttr) {
     override fun open() {
-        openDrawer(GravityCompat.END)
+        openDrawer(GravityCompat.START)
     }
 
     override fun close() {
-        closeDrawer(GravityCompat.END)
+        closeDrawer(GravityCompat.START)
     }
 }

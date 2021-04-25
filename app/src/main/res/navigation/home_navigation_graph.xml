@@ -8,6 +8,14 @@
         android:id="@+id/menu_feed"
         android:name="com.femiras.framework.mvvm.ui.home.HomeFragment"
         android:label="Home" >
+        <action
+            android:id="@+id/action_homeFragment_to_logFragment"
+            app:destination="@id/logFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logFragment"
+        android:name="com.femiras.framework.mvvm.ui.home.log.LogFragment"
+        android:label="Update Log">
     </fragment>
     <fragment
         android:id="@+id/menu_tv"
