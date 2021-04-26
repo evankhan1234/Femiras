@@ -21,9 +21,10 @@ import androidx.navigation.ui.setupWithNavController
 import com.femiras.framework.mvvm.R
 import com.femiras.framework.mvvm.databinding.ActivityHomeBinding
 import com.femiras.framework.mvvm.utils.DrawerHelper
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.layout_appbar.view.*
-
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var appbarConfig: AppBarConfiguration

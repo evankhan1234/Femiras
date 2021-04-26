@@ -1,13 +1,22 @@
-package com.femiras.framework.mvvm.ui.started.view
+package com.femiras.framework.mvvm.ui.home.log
 
+
+import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
-import androidx.databinding.DataBindingUtil
+import android.view.ViewGroup
+
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.femiras.framework.mvvm.R
-import com.femiras.framework.mvvm.databinding.ActivityStartedBinding
+import com.femiras.framework.mvvm.ui.home.today.SecondAdapter
 import com.michalsvec.singlerowcalendar.calendar.CalendarChangesObserver
 import com.michalsvec.singlerowcalendar.calendar.CalendarViewManager
 import com.michalsvec.singlerowcalendar.calendar.SingleRowCalendarAdapter
@@ -16,35 +25,41 @@ import com.michalsvec.singlerowcalendar.utils.DateUtils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.calendar_item.view.*
 import kotlinx.android.synthetic.main.fragment_log_period.*
+import kotlinx.android.synthetic.main.fragment_log_period.second_list
+
 import java.util.*
-
 @AndroidEntryPoint
-class StartedActivity : AppCompatActivity() {
-
+class LogPeriodFragment : Fragment() {
+    var secondAdapter: SecondAdapter?=null
     private val calendar = Calendar.getInstance()
     private var currentMonth = 0
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_log_period, container, false)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_log_period)
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         // set current date to calendar and current month to currentMonth variable
         calendar.time = Date()
         currentMonth = calendar[Calendar.MONTH]
 
         // enable white status bar with black icons
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-            window.statusBarColor = Color.WHITE
-        }
 
+        secondAdapter = SecondAdapter(requireContext())
+        second_list?.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
+            adapter = secondAdapter
+        }
         // calendar view manager is responsible for our displaying logic
         val myCalendarViewManager = object :
-            CalendarViewManager {
+                CalendarViewManager {
             override fun setCalendarViewResourceId(
-                position: Int,
-                date: Date,
-                isSelected: Boolean
+                    position: Int,
+                    date: Date,
+                    isSelected: Boolean
             ): Int {
                 // set date to calendar according to position where we are
                 val cal = Calendar.getInstance()
@@ -62,9 +77,9 @@ class StartedActivity : AppCompatActivity() {
                 else
                 // here we return items which are not selected
                     when (cal[Calendar.DAY_OF_WEEK]) {
-                        Calendar.MONDAY -> R.layout.first_special_calendar_item
-                        Calendar.WEDNESDAY -> R.layout.second_special_calendar_item
-                        Calendar.FRIDAY -> R.layout.third_special_calendar_item
+                        Calendar.MONDAY -> R.layout.calendar_item
+                        Calendar.WEDNESDAY -> R.layout.calendar_item
+                        Calendar.FRIDAY -> R.layout.calendar_item
                         else -> R.layout.calendar_item
                     }
 
@@ -73,13 +88,14 @@ class StartedActivity : AppCompatActivity() {
             }
 
             override fun bindDataToCalendarView(
-                holder: SingleRowCalendarAdapter.CalendarViewHolder,
-                date: Date,
-                position: Int,
-                isSelected: Boolean
+                    holder: SingleRowCalendarAdapter.CalendarViewHolder,
+                    date: Date,
+                    position: Int,
+                    isSelected: Boolean
             ) {
                 // using this method we can bind data to calendar view
                 // good practice is if all views in layout have same IDs in all item views
+                tvDay.text = "${DateUtils.getMonthName(date)}, ${DateUtils.getYear(date)} "
                 holder.itemView.tv_date_calendar_item.text = DateUtils.getDayNumber(date)
                 holder.itemView.tv_day_calendar_item.text = DateUtils.getDay3LettersName(date)
 
@@ -88,11 +104,11 @@ class StartedActivity : AppCompatActivity() {
 
         // using calendar changes observer we can track changes in calendar
         val myCalendarChangesObserver = object :
-            CalendarChangesObserver {
+                CalendarChangesObserver {
             // you can override more methods, in this example we need only this one
             override fun whenSelectionChanged(isSelected: Boolean, position: Int, date: Date) {
-                tvDay.text = "${DateUtils.getMonthName(date)}, ${DateUtils.getDayNumber(date)} "
-               // tvDay.text = DateUtils.getDayName(date)
+                tvDay.text = "${DateUtils.getMonthName(date)}, ${DateUtils.getYear(date)} "
+                // tvDay.text = DateUtils.getDayName(date)
                 super.whenSelectionChanged(isSelected, position, date)
             }
 
@@ -107,8 +123,8 @@ class StartedActivity : AppCompatActivity() {
                 cal.time = date
                 // in this example sunday and saturday can't be selected, others can
                 return when (cal[Calendar.DAY_OF_WEEK]) {
-                    Calendar.SATURDAY -> false
-                    Calendar.SUNDAY -> false
+                    Calendar.SATURDAY -> true
+                    Calendar.SUNDAY -> true
                     else -> true
                 }
             }
@@ -121,7 +137,7 @@ class StartedActivity : AppCompatActivity() {
             calendarSelectionManager = mySelectionManager
             //setDates(getFutureDatesOfCurrentMonth())
 
-            //includeCurrentDate = true
+            includeCurrentDate = true
             init()
         }
 
@@ -174,4 +190,7 @@ class StartedActivity : AppCompatActivity() {
         calendar.add(Calendar.DATE, -1)
         return list
     }
+
+
 }
+

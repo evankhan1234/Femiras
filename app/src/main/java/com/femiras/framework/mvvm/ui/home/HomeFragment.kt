@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.femiras.framework.mvvm.R
+import com.femiras.framework.mvvm.ui.questions.QuestionsOneFragmentDirections
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_o_t_p.*
 
 class HomeFragment : Fragment() {
 
@@ -25,7 +28,13 @@ class HomeFragment : Fragment() {
         pager.offscreenPageLimit = 1
         pager.adapter = adapter
         tabLayout.setupWithViewPager(pager)
+        btnCalendar.setOnClickListener{
+            findNavController().navigate(
+                HomeFragmentDirections.actionHomeFragmentToLogPeriodFragment(
 
+                )
+            )
+        }
 
     }
 
