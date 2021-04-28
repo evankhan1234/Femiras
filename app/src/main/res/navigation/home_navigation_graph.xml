@@ -14,6 +14,17 @@
         <action
             android:id="@+id/action_homeFragment_to_logPeriodFragment"
             app:destination="@id/logPeriodFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_home_symtoms"
+            app:destination="@id/home_symtoms" />
+        <action
+            android:id="@+id/action_homeFragment_to_moodFragment"
+            app:destination="@id/moodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moodFragment"
+        android:name="com.femiras.framework.mvvm.ui.home.today.moods.MoodsFragment"
+        android:label="Moods">
     </fragment>
     <fragment
         android:id="@+id/logFragment"
@@ -33,8 +44,8 @@
 
     <fragment
         android:id="@+id/menu_chat"
-        android:name="com.femiras.framework.mvvm.ui.chat.ChatFragment"
-        android:label="AnalysisFragment">
+        android:name="com.femiras.framework.mvvm.ui.chat.SecretChatFragment"
+        android:label="Secret Chat">
     </fragment>
 
     <fragment
@@ -53,7 +64,21 @@
     <fragment
         android:id="@+id/home_today"
         android:name="com.femiras.framework.mvvm.ui.home.today.TodayFragment"
-        android:label="AnalysisFragment">
+        android:label="TodayFragment">
+        <action
+            android:id="@+id/action_home_today_to_home_symtoms"
+            app:destination="@id/home_symtoms" />
+    </fragment>
+    <fragment
+        android:id="@+id/home_first"
+        android:name="com.femiras.framework.mvvm.ui.home.today.FirstFragment"
+        android:label="First">
+
+    </fragment>
+    <fragment
+        android:id="@+id/home_symtoms"
+        android:name="com.femiras.framework.mvvm.ui.home.today.symptoms.SymptomsFragment"
+        android:label="Symptoms">
 
     </fragment>
 </navigation>

@@ -1,14 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.chat.ChatFragment">
+    android:padding="2dp"
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F6F6F6"
+    >
+
+    <LinearLayout
+
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/backToTransactionButton"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_search"
 
-</FrameLayout>
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:textSize="13sp"
+            android:background="@null"
+            android:hint="Search"
+            android:textColorHint="#EA537E"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="text" />
+
+    </LinearLayout>
+    <LinearLayout
+        app:layout_constraintEnd_toEndOf="@+id/backToTransactionButton"
+        app:layout_constraintStart_toStartOf="@+id/backToTransactionButton"
+        app:layout_constraintTop_toBottomOf="@+id/backToTransactionButton"
+        android:id="@+id/calendarView"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:orientation="horizontal"
+           >
+
+            <Button
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="Recommended Posts"
+                android:textSize="11sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+
+                android:background="@drawable/ic_rectangle_57" />
+
+            <Button
+
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="Interested Posts"
+                android:textSize="11sp"
+                android:textAllCaps="false"
+                android:textColor="#EA537E"
+
+                android:background="@drawable/ic_rectangle_58" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/secret_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical"
+        android:paddingHorizontal="8dp"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        tools:listitem="@layout/layout_secret_chat_one" />
+
+    <View
+        android:id="@+id/guideline14"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secret_chat"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

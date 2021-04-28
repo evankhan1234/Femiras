@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/dialogTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+
+                    android:text="Sex"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="21sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.045"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dialogTitleTextView"
+                    android:id="@+id/textView51"
+                    android:layout_width="240dp"
+                    android:layout_height="40dp"
+                    android:text="Had Sex"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/ic_rectangle_57" />
+
+                <Button
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView51"
+                    app:layout_constraintStart_toStartOf="@+id/textView51"
+                    app:layout_constraintTop_toBottomOf="@+id/textView51"
+                    android:id="@+id/playlistNameEditText"
+                    android:layout_width="240dp"
+                    android:layout_height="40dp"
+                    android:text="Multiple Sessions"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    android:textColor="#EA537E"
+                    android:background="@drawable/ic_rectangle_58" />
+
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView51"
+                    app:layout_constraintStart_toStartOf="@+id/textView51"
+                    app:layout_constraintTop_toBottomOf="@+id/playlistNameEditText"
+
+                    android:layout_width="240dp"
+                    android:layout_height="40dp"
+                    android:text="No Sex"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    android:textColor="#EA537E"
+
+                    android:background="@drawable/ic_rectangle_58" />
+
+                <LinearLayout
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/btn"
+                    app:layout_constraintStart_toStartOf="@+id/btn"
+                    app:layout_constraintTop_toBottomOf="@+id/btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:text="CANCEL"
+                        android:textSize="11sp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/capsule_button" />
+
+                    <Button
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:text="SAVE"
+                        android:textSize="11sp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/capsule_button" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>
+
