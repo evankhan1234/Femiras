@@ -10,7 +10,7 @@
         android:startColor="#F3D9E4"
         android:endColor="#F3E3EA"
         android:centerColor="#F4E9EE"
-      />
+        />
     <size
         android:width="120dp"
         android:height="120dp"/>

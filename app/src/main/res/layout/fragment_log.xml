@@ -14,13 +14,487 @@
         android:layout_height="wrap_content"
         tools:context=".ui.started.view.StartedActivity">
 
+        <TextView
+            android:id="@+id/dialogTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:text="Sex"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/linear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogTitleTextView"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <com.linfaxin.multirowsradiogroup.MultiRowsRadioGroup
+
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <RadioButton
+
+                            android:checked="true"
+                            android:id="@+id/radio0"
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:text="Had Sex"
+                            android:background="@drawable/background_rb"
+                            android:textColor="@drawable/txt_rb"
+                            android:button="@android:color/transparent"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            />
+
+                        <RadioButton
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:text="Multiple Sessions"
+                            android:layout_marginLeft="8dp"
+                            android:id="@+id/radio1"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/background_rb"
+                            android:textColor="@drawable/txt_rb"
+                            android:button="@android:color/transparent"
+                            />
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:textSize="12sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:text="No Sex"
+                        android:id="@+id/radio2"
+                        android:layout_width="160dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/background_rb"
+                        android:textColor="@drawable/txt_rb"
+                        android:button="@android:color/transparent"
+                        />
+                </com.linfaxin.multirowsradiogroup.MultiRowsRadioGroup>
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="12dp"
+                android:background="#CCC"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/dialogTitleTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:text="Menstruation"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/linear"
+            app:layout_constraintStart_toStartOf="@+id/linear"
+            app:layout_constraintTop_toBottomOf="@+id/linear"
+            app:layout_constraintHorizontal_bias="0.045"
+             />
+        <LinearLayout
+            android:id="@+id/linear1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogTitleTextView1"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <com.linfaxin.multirowsradiogroup.MultiRowsRadioGroup
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <RadioButton
+
+                            android:checked="true"
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:text="Spotting"
+                            android:background="@drawable/background_rb"
+                            android:textColor="@drawable/txt_rb"
+                            android:button="@android:color/transparent"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            />
+
+                        <RadioButton
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:text="Light"
+                            android:layout_marginLeft="4dp"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/background_rb"
+                            android:textColor="@drawable/txt_rb"
+                            android:button="@android:color/transparent"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <RadioButton
+
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:text="Medium"
+                            android:background="@drawable/background_rb"
+                            android:textColor="@drawable/txt_rb"
+                            android:button="@android:color/transparent"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            />
+
+                        <RadioButton
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:text="Heavy"
+                            android:layout_marginLeft="4dp"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/background_rb"
+                            android:textColor="@drawable/txt_rb"
+                            android:button="@android:color/transparent"
+                            />
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:textSize="12sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:text="None"
+                        android:layout_width="160dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/background_rb"
+                        android:textColor="@drawable/txt_rb"
+                        android:button="@android:color/transparent"
+                        />
+                </com.linfaxin.multirowsradiogroup.MultiRowsRadioGroup>
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="12dp"
+                android:background="#CCC"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+        <RelativeLayout
+
+            android:id="@+id/tv_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/tv"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_text"
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Basal Body Temperature (BBT)"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+
+                    />
+
+                <TextView
+
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="----c"
+
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:src="@drawable/ic_baseline_data_usage_24"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginTop="10dp"
+
+                android:layout_below="@id/tv"
+                android:background="#CCC"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+
+            android:id="@+id/test1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/trr"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Physical Symptoms"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_marginTop="14dp"
+
+                android:layout_below="@id/trr"
+                android:background="#CCC"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+
+            android:id="@+id/test2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/test1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/trr1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Moods"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_marginTop="14dp"
+
+                android:layout_below="@id/trr1"
+                android:background="#CCC"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/dialogTitleTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:text="Feeling Stressed?"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/test2"
+            app:layout_constraintStart_toStartOf="@+id/test2"
+            app:layout_constraintTop_toBottomOf="@+id/test2"
+            app:layout_constraintHorizontal_bias="0.045"
+            />
+        <LinearLayout
+            android:id="@+id/linear2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogTitleTextView2"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <com.linfaxin.multirowsradiogroup.MultiRowsRadioGroup
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <RadioButton
+
+
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:text="Yes"
+                            android:background="@drawable/background_rb"
+                            android:textColor="@drawable/txt_rb"
+                            android:button="@android:color/transparent"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            />
+
+                        <RadioButton
+                            android:checked="true"
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:text="No"
+                            android:layout_marginLeft="4dp"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/background_rb"
+                            android:textColor="@drawable/txt_rb"
+                            android:button="@android:color/transparent"
+                            />
+                    </LinearLayout>
+
+                </com.linfaxin.multirowsradiogroup.MultiRowsRadioGroup>
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="12dp"
+                android:background="#CCC"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+        <RelativeLayout
+
+            android:id="@+id/test4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/trr4"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Sleep Duration"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_marginTop="14dp"
+
+                android:layout_below="@id/trr4"
+                android:background="#CCC"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </RelativeLayout>
         <com.prolificinteractive.materialcalendarview.MaterialCalendarView
             android:id="@+id/imageView1"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/test4"/>
 
 
         <com.prolificinteractive.materialcalendarview.MaterialCalendarView

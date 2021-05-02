@@ -23,7 +23,7 @@ class QuestionsTwoFragment : Fragment() {
 
     val pinkDateList = Arrays.asList(
             "2021-04-15",
-            "2021-04-16", "2021-04-17", "2021-04-18", "2021-04-19", "2021-04-20", "2021-04-21")
+            "2021-04-16", "2021-04-17", "2021-04-18", "2021-04-19")
     val grayDateList = Arrays.asList(
             "2021-04-22", "2021-04-23", "2021-04-24"
             )
@@ -53,7 +53,7 @@ class QuestionsTwoFragment : Fragment() {
 
         setEvent(pinkDateList, pink)
        // setEvent(grayDateList, gray)
-
+        imageView13
         imageView13!!.invalidateDecorators()
 
         backToTransactionButton.setOnClickListener{
@@ -98,14 +98,14 @@ class QuestionsTwoFragment : Fragment() {
         }
         if (color == pink) {
             setDecor(datesCenter, R.drawable.p_center)
-            setDecor(datesLeft, R.drawable.p_left)
-            setDecor(datesRight, R.drawable.p_right)
-            setDecor(datesIndependent, R.drawable.p_independent)
+            setDecor(datesLeft, R.drawable.p_center)
+            setDecor(datesRight, R.drawable.p_center)
+            setDecor(datesIndependent, R.drawable.p_center)
         } else {
             setDecor(datesCenter, R.drawable.g_center)
-            setDecor(datesLeft, R.drawable.g_left)
-            setDecor(datesRight, R.drawable.g_right)
-            setDecor(datesIndependent, R.drawable.g_independent)
+            setDecor(datesLeft, R.drawable.g_center)
+            setDecor(datesRight, R.drawable.g_center)
+            setDecor(datesIndependent, R.drawable.g_center)
         }
     }
 

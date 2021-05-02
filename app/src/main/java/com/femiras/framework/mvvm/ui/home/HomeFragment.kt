@@ -35,6 +35,13 @@ class HomeFragment : Fragment() {
                 )
             )
         }
+        fab.setOnClickListener{
+            findNavController().navigate(
+                    HomeFragmentDirections.actionHomeFragmentToLogFragment(
+
+                    )
+            )
+        }
 
     }
 

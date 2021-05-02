@@ -6,10 +6,9 @@
         android:icon="@drawable/ic_icons_home" />
     <item
         android:id="@id/menu_tv"
-        android:title="Account"
+        android:title="Resources"
         android:icon="@drawable/ic_supervisor_account" />
-    <item android:id="@+id/placeholder"
-        android:title="" />
+
     <item
         android:id="@id/menu_chat"
         android:title="Chat"
