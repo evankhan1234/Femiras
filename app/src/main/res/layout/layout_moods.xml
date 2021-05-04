@@ -69,7 +69,7 @@
 
                     <RadioButton
 
-                        android:checked="true"
+
                         android:id="@+id/radio0"
 
                         android:background="@drawable/background_rb"

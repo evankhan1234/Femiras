@@ -26,7 +26,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
-                android:id="@+id/profile_image"
+                android:id="@+id/profile_image1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/doctor"
@@ -69,10 +69,10 @@
 
                     <RadioButton
 
-                        android:checked="true"
+
                         android:id="@+id/radio0"
 
-                        android:background="@drawable/background_rb"
+                        android:background="@drawable/background_mild"
                         android:textColor="@drawable/txt_rb"
                         android:button="@android:color/transparent"
                         android:layout_width="60dp"
@@ -84,7 +84,7 @@
                         android:id="@+id/radio1"
                         android:layout_width="60dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/background_rb"
+                        android:background="@drawable/background_moderate"
                         android:textColor="@drawable/txt_rb"
                         android:button="@android:color/transparent"
                         />
@@ -94,7 +94,7 @@
                         android:id="@+id/radio2"
                         android:layout_width="60dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/background_rb"
+                        android:background="@drawable/background_severe"
                         android:textColor="@drawable/txt_rb"
                         android:button="@android:color/transparent"
                         />

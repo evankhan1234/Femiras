@@ -18,6 +18,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:padding="4dp"
+                android:layout_marginBottom="28dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -35,95 +36,60 @@
                     app:layout_constraintHorizontal_bias="0.045"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-                <LinearLayout
+
+
+
+
+                <com.linfaxin.multirowsradiogroup.MultiRowsRadioGroup
+
+
+                    android:id="@+id/owners"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/dialogTitleTextView"
-                    android:id="@+id/owners"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-
-                    android:orientation="vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
                     >
 
                     <LinearLayout
+                        android:orientation="horizontal"
                         android:weightSum="2"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-
-                        android:orientation="horizontal"
                         >
-
-                        <Button
-
-                            android:layout_weight="1"
+                        <RadioButton
+                            android:id="@+id/radio_had_sex"
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:text="Yes"
+                            android:background="@drawable/background_rb"
+                            android:textColor="@drawable/txt_rb"
+                            android:button="@android:color/transparent"
                             android:layout_width="0dp"
-                            android:layout_height="40dp"
-                            android:text="YES"
-                            android:textSize="11sp"
-                            android:textAllCaps="false"
-                            android:textColor="#EA537E"
-
-                            android:background="@drawable/ic_rectangle_58" />
-
-                        <Button
-
-                            android:layout_marginLeft="10dp"
                             android:layout_weight="1"
+                            android:layout_height="35dp"
+                            />
+
+                        <RadioButton
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:text="No"
+                            android:layout_marginLeft="8dp"
+                            android:id="@+id/radio_multiple_sex"
                             android:layout_width="0dp"
-                            android:layout_height="40dp"
-                            android:text="NO"
-                            android:textSize="11sp"
-                            android:textAllCaps="false"
-                            android:textColor="#EA537E"
-
-                            android:background="@drawable/ic_rectangle_58" />
-
-
-
+                            android:layout_weight="1"
+                            android:layout_height="35dp"
+                            android:background="@drawable/background_rb"
+                            android:textColor="@drawable/txt_rb"
+                            android:button="@android:color/transparent"
+                            />
                     </LinearLayout>
-                </LinearLayout>
 
-
-
-                <LinearLayout
-                    android:paddingBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    app:layout_constraintEnd_toEndOf="@+id/owners"
-                    app:layout_constraintStart_toStartOf="@+id/owners"
-                    app:layout_constraintTop_toBottomOf="@+id/owners"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/btnCancel"
-                        android:layout_marginTop="10dp"
-
-                        android:layout_width="120dp"
-                        android:layout_height="35dp"
-                        android:text="CANCEL"
-                        android:textSize="11sp"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:background="@drawable/capsule_button" />
-
-                    <Button
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_width="120dp"
-                        android:layout_height="35dp"
-                        android:text="SAVE"
-                        android:textSize="11sp"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:background="@drawable/capsule_button" />
-                </LinearLayout>
+                </com.linfaxin.multirowsradiogroup.MultiRowsRadioGroup>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>

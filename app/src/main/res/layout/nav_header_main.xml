@@ -23,7 +23,7 @@
         android:background="@drawable/ic_rectangle_61"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="180dp">
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"

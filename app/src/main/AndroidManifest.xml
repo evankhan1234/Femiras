@@ -19,7 +19,8 @@
         <activity android:name=".ui.questions.QuestionsActivity" />
         <activity android:name=".ui.started.view.StartedActivity" />
         <activity android:name=".ui.spalash.SpalashActivity"/>
-        <activity android:name=".ui.HomeActivity">
+        <activity android:name=".ui.HomeActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

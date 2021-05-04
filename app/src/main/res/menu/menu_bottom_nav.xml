@@ -7,7 +7,7 @@
     <item
         android:id="@id/menu_tv"
         android:title="Resources"
-        android:icon="@drawable/ic_supervisor_account" />
+        android:icon="@drawable/ic_baseline_dynamic_form_24" />
 
     <item
         android:id="@id/menu_chat"

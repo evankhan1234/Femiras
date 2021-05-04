@@ -48,7 +48,15 @@ class FirstFragment : Fragment(), SexListener {
             window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             show()
         }
-        playlistBinding.btnCancel.setOnClickListener { alertDialog.dismiss() }
+        playlistBinding.radioHadSex.setOnClickListener { playlistBinding.protectedSex.visibility=View.VISIBLE
+
+            playlistBinding.radioGroupNoSex.clearCheck()}
+        playlistBinding.radioMultipleSex.setOnClickListener { playlistBinding.protectedSex.visibility=View.VISIBLE
+            playlistBinding.radioGroupNoSex.clearCheck()}
+        playlistBinding.radioNoSex.setOnClickListener { playlistBinding.protectedSex.visibility=View.GONE
+        playlistBinding.btns.clearCheck()
+        playlistBinding.protectedSex.clearCheck()
+        }
     }
     fun showBaserDialog() {
         val playlistBinding = LayoutBodyTemperatureBinding.inflate(this.layoutInflater)
@@ -66,7 +74,7 @@ class FirstFragment : Fragment(), SexListener {
             window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             show()
         }
-        playlistBinding.btnCancel.setOnClickListener { alertDialog.dismiss() }
+
     }
     fun showMenstruationDialog() {
         val playlistBinding = LayoutMenstruationBinding.inflate(this.layoutInflater)
@@ -75,7 +83,7 @@ class FirstFragment : Fragment(), SexListener {
             window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             show()
         }
-        playlistBinding.btnCancel.setOnClickListener { alertDialog.dismiss() }
+
     }
     override fun onLoad(type: String) {
         when (type) {

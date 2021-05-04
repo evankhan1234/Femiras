@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:hpb="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.account.AccountFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:background="@drawable/background_second"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+        <su.hm.hprob.HorizontalProgressBar
+            android:id="@+id/hpb"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            hpb:inside_padding="0dp"
+            hpb:primary_color="#CCC"
+            hpb:secondary_color="#731111"
+            hpb:primary_thickness="50dp"
+            hpb:shape="round"
 
-</FrameLayout>
+            hpb:text_color="#000000"
+            hpb:text_enable="true"
+            hpb:text_size="16sp" />
+    </LinearLayout>
+
+    <su.hm.hprob.HorizontalProgressBar
+        android:id="@+id/hpb1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        hpb:inside_padding="0dp"
+        hpb:primary_color="#CCC"
+        hpb:primary_thickness="50dp"
+        hpb:shape="round"
+        hpb:text_color="#000000"
+        hpb:text_enable="true"
+        hpb:text_size="16sp" />
+</LinearLayout>
