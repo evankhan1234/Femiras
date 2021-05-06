@@ -62,18 +62,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         >
+
                         <RadioButton
                             android:id="@+id/radio_had_sex"
-                            android:textSize="12sp"
-                            android:textAlignment="center"
-                            android:text="Had Sex"
-                            android:background="@drawable/background_rb"
-                            android:textColor="@drawable/txt_rb"
-                            android:button="@android:color/transparent"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="35dp"
-                            />
+                            android:layout_weight="1"
+                            android:background="@drawable/background_rb"
+                            android:button="@android:color/transparent"
+                            android:text="Had Sex"
+                            android:textAlignment="center"
+                            android:textColor="@drawable/txt_rb"
+                            android:textSize="12sp" />
 
                         <RadioButton
                             android:textSize="12sp"

@@ -24,7 +24,7 @@ class HomePagerAdapter (
         return when (position) {
             0 -> "TODAY"
             1 -> "ANALYSIS"
-            else -> "RESOURCES"
+            else -> "QUESTIONS"
         }
     }
 

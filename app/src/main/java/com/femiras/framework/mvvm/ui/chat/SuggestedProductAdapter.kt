@@ -1,33 +1,36 @@
-package com.femiras.framework.mvvm.ui.home.today
+package com.femiras.framework.mvvm.ui.chat
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.femiras.framework.mvvm.R
-import kotlinx.android.synthetic.main.layout_daily_news.view.*
+import com.femiras.framework.mvvm.ui.home.today.SecondAdapter
+import kotlinx.android.synthetic.main.layout_secret_chat_shop.view.*
 
-class ThirdAdapter  (val context: Context) : RecyclerView.Adapter<ThirdAdapter.CustomViewHolder>() {
+class SuggestedProductAdapter (val context: Context) : RecyclerView.Adapter<SuggestedProductAdapter.CustomViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val inflater = LayoutInflater.from(parent?.context)
-        val cellForRow = inflater.inflate(R.layout.layout_daily_news, parent, false)
+        val cellForRow = inflater.inflate(R.layout.layout_secret_chat_shop, parent, false)
         return CustomViewHolder(cellForRow)
     }
 
     override fun getItemCount(): Int {
 
 
-        return 20
+        return 10
     }
 
     override fun onBindViewHolder(holder:CustomViewHolder, position: Int) {
-         if(position % 2  == 0)
-            holder.itemView.poster.setImageResource(R.drawable.test)
-        else
-            holder.itemView.poster.setImageResource(R.drawable.pregnancy)
+
+        Glide.with(context)
+            .load("https://media2.s-nbcnews.com/j/newscms/2021_07/3451045/210218-product-of-the-year-2x1-cs_0a641fd6142e393ca806fddc771e4745.fit-760w.jpg")
+            .into( holder.itemView.icon!!)
+
 //       when (position) {
 //            1 ->
 //                holder.itemView.icon.setImageResource(R.drawable.seconds)

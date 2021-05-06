@@ -38,8 +38,8 @@
     </fragment>
     <fragment
         android:id="@+id/menu_tv"
-        android:name="com.femiras.framework.mvvm.ui.account.AccountFragment"
-        android:label="AnalysisFragment">
+        android:name="com.femiras.framework.mvvm.ui.home.resource.ResourceFragment"
+        android:label="Resources">
     </fragment>
 
     <fragment

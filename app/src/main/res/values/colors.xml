@@ -11,6 +11,7 @@
     <color name="grey">#7a7a7a</color>
     <color name="lightGrey">#aaaaaa</color>
     <color name="veryLightGrey">#f0f0f0</color>
+    <color name="veryLightGrey_">#E4E2E2</color>
     <color name="purple">#7d64e6</color>
     <color name="shadow_color">#66000000</color>
     <color name="yellow">#ffee00</color>

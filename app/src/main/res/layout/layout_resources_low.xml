@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <LinearLayout
+
+        android:layout_marginRight="10dp"
+        android:layout_width="160dp"
+        android:layout_height="260dp"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="160dp"
+            android:layout_height="260dp"
+
+
+            android:layout_marginBottom="6dp"
+
+            >
+
+
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/name"
+                android:padding="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#292929"
+                    android:layout_marginLeft="5dp"
+                    android:textAlignment="center"
+                    android:maxLines="1"
+                    android:text="Popular in Flo"
+
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/owner"
+                app:layout_constraintStart_toStartOf="@id/name"
+                app:layout_constraintEnd_toEndOf="@id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                android:layout_height="260dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="160dp"
+                    android:layout_height="260dp"
+                    android:foreground="@drawable/image_overlay_resource"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="9dip"
+
+                    app:riv_mutate_background="true"
+                    app:riv_tile_mode="clamp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+                <ImageView
+                    android:id="@+id/imageView_uppers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/ic_baseline_lock_24"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/imageView_upper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:text=" Early Symptoms of?\n Pregnency"
+
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginBottom="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="0.491"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>
