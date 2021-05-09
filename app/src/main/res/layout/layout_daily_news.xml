@@ -41,7 +41,7 @@
             android:layout_marginEnd="8dp"
             android:ellipsize="end"
 
-            android:text="Birth control pills"
+            android:text="করোনার ভারতীয় ধরন নিয়ে সুখবর"
             android:textColor="#594D92"
             android:textSize="15sp"
             app:layout_constraintEnd_toStartOf="@+id/poster"
@@ -71,7 +71,7 @@
             android:layout_marginTop="8dp"
             android:textSize="13sp"
 
-            android:text="BC NDP pledge free prescription contraception,Liberals would scrap seniors’ driver exam fee"
+            android:text="ভারতে শনাক্ত করোনার নতুন ধরনের বিরুদ্ধে টিকা কাজ করছে বলে এনডিটিভি অনলাইনে প্রকাশিত এক প্রতিবেদনে বলা হয়েছে। করোনার সংক্রমণে নাস্তানাবুদ ভারতের জন্য একে একটি সুখবর হিসেবে দেখা হচ্ছে।"
             android:textColor="#292929"
             app:layout_constraintStart_toStartOf="@id/name"
             app:layout_constraintEnd_toEndOf="@id/name"
@@ -84,7 +84,7 @@
             android:id="@+id/owners"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="The party said the program to provide . . ."
+            android:text="আরও নানা ধরন আছে বলে ধারণা করা হচ্ছে।. . ."
             android:textColor="#292929"
             app:layout_constraintStart_toStartOf="@id/owner"
             app:layout_constraintEnd_toEndOf="@id/owner"

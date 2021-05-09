@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.femiras.framework.mvvm.ui.home.anaylsis.AnalysisFragment
+import com.femiras.framework.mvvm.ui.home.questions.QuestionsFragment
 import com.femiras.framework.mvvm.ui.home.resource.ResourceFragment
 import com.femiras.framework.mvvm.ui.home.today.TodayFragment
 
@@ -16,7 +17,7 @@ class HomePagerAdapter (
         return when (position) {
             0 -> TodayFragment.newInstance()
             1 -> AnalysisFragment.newInstance()
-            else -> ResourceFragment.newInstance()
+            else -> QuestionsFragment.newInstance()
         }
     }
 
