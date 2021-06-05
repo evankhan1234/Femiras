@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.femiras.framework.mvvm.R
 import kotlinx.android.synthetic.main.layout_resources_low.view.*
 
-class ResourceLowAdapter (val context: Context) : RecyclerView.Adapter<ResourceLowAdapter.CustomViewHolder>() {
+class ResourceLowAdapter (val context: Context,val resourceListener:ResourceListener) : RecyclerView.Adapter<ResourceLowAdapter.CustomViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
@@ -25,6 +25,9 @@ class ResourceLowAdapter (val context: Context) : RecyclerView.Adapter<ResourceL
     }
 
     override fun onBindViewHolder(holder:CustomViewHolder, position: Int) {
+        holder.itemView.setOnClickListener{
+            resourceListener.onShow(1)
+        }
         Glide.with(context)
             .load("https://thumbs.dreamstime.com/z/young-surprised-shocked-pregnant-woman-holding-positive-result-pregnancy-test-stress-disbelief-face-expression-unwan-126594701.jpg")
             .into( holder.itemView.imageView4!!)

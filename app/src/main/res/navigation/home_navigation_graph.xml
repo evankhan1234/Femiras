@@ -40,8 +40,25 @@
         android:id="@+id/menu_tv"
         android:name="com.femiras.framework.mvvm.ui.home.resource.ResourceFragment"
         android:label="Resources">
-    </fragment>
+        <action
+            android:id="@+id/action_menu_tv_to_menu_details"
+            app:destination="@id/menu_details" />
 
+    </fragment>
+   <dialog
+        android:id="@+id/menu_details"
+        android:name="com.femiras.framework.mvvm.ui.home.resource.ResourceDetailsFragment"
+        android:label="Resources">
+       <action
+           android:id="@+id/action_menu_details_to_menu_list_details"
+
+           app:destination="@id/menu_list_details" />
+    </dialog>
+    <dialog
+        android:id="@+id/menu_list_details"
+        android:name="com.femiras.framework.mvvm.ui.home.resource.ResourceListDetailsFragment"
+        android:label="Resources">
+    </dialog>
     <fragment
         android:id="@+id/menu_chat"
         android:name="com.femiras.framework.mvvm.ui.chat.SecretChatFragment"

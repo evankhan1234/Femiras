@@ -12,7 +12,7 @@ import com.femiras.framework.mvvm.R
 import kotlinx.android.synthetic.main.layout_resources.view.*
 
 
-class ResourceAdapter  (val context: Context) : RecyclerView.Adapter<ResourceAdapter.CustomViewHolder>() {
+class ResourceAdapter  (val context: Context,val resourceListener:ResourceListener) : RecyclerView.Adapter<ResourceAdapter.CustomViewHolder>() {
 
     var resourceHighAdapter: ResourceHighAdapter?=null
     var resourceLowAdapter: ResourceLowAdapter?=null
@@ -55,7 +55,7 @@ class ResourceAdapter  (val context: Context) : RecyclerView.Adapter<ResourceAda
             }
         }
         else{
-            resourceLowAdapter = ResourceLowAdapter(context)
+            resourceLowAdapter = ResourceLowAdapter(context,resourceListener)
             holder.itemView.third_list?.apply {
                 layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
 
